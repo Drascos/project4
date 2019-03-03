@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Colicss | Home</title>
+</head>
+<body>
+<!--header-->
+<nav class="navbar">
+
+    <div id="mmenu" class="dropdown">
+        <button class="dropbtn">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </button>
+        <div class="dropdown-content">
+            <a href="../index.html">Home</a>
+            <a href="./hosting.html">Hosting</a>
+            <a href="./cloud.html">Cloud</a>
+            <a href="./reviews.html">Reviews</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="container">
+        <img class="header-logo" src="../media/header-logo.png">
+        <ul class="nav">
+            <li class="navitem"><a href="../index.html">Home</a></li>
+            <li class="navitem"><a href="./hosting.html">Hosting</a></li>
+            <li class="navitem"><a href="./cloud.html">Cloud</a></li>
+            <li class="navitem"><a href="./reviews.html">Reviews</a></li>
+            <li class="navitem"><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--contact header-->
+<div class="slide-show">
+
+    <div class="slideshow-container">
+        <ul class="contact-info">
+            <li><h1><b><span style="color:black;font-size:40px;">Collicss Webhosting</span></b></h1></li>
+            <li class="bigtxt">Herenstraat 24</li>
+            <li class="bigtxt">7776 AG, Slagharen</li>
+            <li class="bigtxt">06-12412498</li>
+            <li class="bigtxt">KVK: 05076893</li>
+        </ul>
+        <div class="mySlides fade">
+            <img src="../media/colicss1.jpg" style="width:100%" height="400px">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="../media/colicss.jpg" style="width:100%" height="400px">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="../media/colicss2.jpg" style="width:100%" height="400px">
+        </div>
+    </div>
+
+
+    <div class="dots" style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<!--contact form-->
+<div class="container">
+    <form class="contact-form">
+        <label for="fname">Voornaam</label>
+        <input type="text" id="fname" name="firstname" placeholder="Uw Voornaam">
+
+        <label for="lname">Achternaam</label>
+        <input type="text" id="lname" name="lastname" placeholder="Uw Achternaam">
+
+        <label for="country">Land</label>
+        <select id="country" name="country">
+            <option value="australia">Nederland</option>
+            <option value="canada">Belgie</option>
+        </select>
+
+        <label for="subject">Onderwerp</label>
+        <textarea id="subject" name="subject" placeholder="Bericht" style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+<!--footer-->
+
+<footer>
+    <div class="footer-left-info">
+        <img class="footer-logo" src="../media/header-logo.png">
+        <div class="info-left">
+            <p>Colicss levert kwalitatieve hostingdiensten sedert 2001. Wij weten dus als geen ander dat websites, servers en online applicaties steeds belangrijker worden in onze maatschappij.<br>
+                Voor de opbouw van onze infrastructuur gebruiken wij enkel kwaliteitsvolle A-merken. Naast het inzetten van kwalitatief materiaal, besteden wij ook veel aandacht aan ondersteuning van onze klanten. Dit door een gebruiksvriendelijke website en onze online ondersteuning (tickets en faq). Wij zijn eveneens tijdens de kantooruren steeds bereikbaar via telefoon. U krijgt een deskundige medewerker aan de lijn die u direct kan verder helpen. Probeer ons uit!</p>
+        </div>
+    </div>
+    <div class="footer-right-info">
+        <div class="pages-info">
+            <h3>Onze Pagina's</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./hosting.html">Hosting</a></li>
+                <li><a href="./cloud.html">Cloud</a></li>
+                <li><a href="./reviews.html">Reviews</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-info">
+            <h3>Volg Ons!</h3>
+            <a class="social-button-footer" href="https://twitter.com/colicssHosting"><img class="twitter-image" src="../media/twitter-squared.png" </a>
+        </div>
+    </div>
+</footer>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>
